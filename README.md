@@ -1,6 +1,10 @@
-# Novarion App Store
+<p align="center">
+  <img src="assets/novarion-app-store-logo.svg" alt="Novarion App Store" width="900">
+</p>
 
-A curated third-party ZimaOS App Store maintained by Novarion.
+<p align="center">
+  A curated third-party ZimaOS App Store maintained by Novarion.
+</p>
 
 The store uses the current ZimaOS App Store v2 source format and publishes generated store metadata to the `gh-pages` branch.
 
@@ -20,6 +24,8 @@ Novarion-Appstore/
 │   └── Velaris/
 │       ├── docker-compose.yml
 │       └── icon.svg
+├── assets/
+│   └── novarion-app-store-logo.svg
 ├── .github/workflows/
 │   └── publish-store.yml
 ├── store-config.json
