@@ -1,0 +1,29 @@
+{
+  "version": 2,
+  "updated_at": "2026-09-10T08:30:28Z",
+  "app_count": 1,
+  "base_url": "https://cdn.jsdelivr.net/gh/Homiiboy/Novarion-Appstore@gh-pages",
+  "apps": [
+    {
+      "id": "com.novarion.velaris",
+      "title": "Velaris",
+      "tagline": "More worlds within.",
+      "category": "Media",
+      "categories": [
+        "media"
+      ],
+      "author": "Homiiboy",
+      "developer": "Homiiboy / Jellyfin Project",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.novarion.velaris/assets/icon.svg",
+      "thumbnail": "",
+      "compose_url": "/apps/com.novarion.velaris/docker-compose.yml",
+      "meta_url": "/apps/com.novarion.velaris/meta.json",
+      "content_hash": "853fe1e2",
+      "version": "1.0.0"
+    }
+  ]
+}

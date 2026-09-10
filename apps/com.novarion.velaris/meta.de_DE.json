@@ -1,0 +1,7 @@
+{
+  "id": "com.novarion.velaris",
+  "title": "Velaris",
+  "release_note": "Erste stabile Velaris-Version mit Production-Docker- und ZimaOS-Paket.",
+  "description": "Velaris ist ein cineastischer Jellyfin-Webclient mit eigener Streaming-Oberfläche, Discovery, Franchise Studio, Release Hub, Insights, Profilen, TV-Modus und einem erweiterten Player. Jellyfin bleibt das Backend für Anmeldung, Bibliotheken, Wiedergabe und Transcoding.",
+  "tagline": "Mehr Welten in deinem Zuhause."
+}

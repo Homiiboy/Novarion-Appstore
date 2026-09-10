@@ -1,0 +1,40 @@
+name: velaris
+
+services:
+  velaris:
+    image: ghcr.io/homiiboy/velaris-web:1.0.0@sha256:564ffe1afb47a17bbfaf6f3024b7c2dcee6ecfaa55e94893ac81e5ac0bd98ce8
+    container_name: velaris
+    restart: unless-stopped
+    ports:
+      - target: 8080
+        published: "${WEBUI_PORT:-8097}"
+        protocol: tcp
+    read_only: true
+    tmpfs:
+      - /tmp:size=64m,mode=1777
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    healthcheck:
+      test:
+        - CMD
+        - wget
+        - -qO-
+        - http://127.0.0.1:8080/healthz
+      interval: 30s
+      timeout: 3s
+      start_period: 10s
+      retries: 3
+    stop_grace_period: 10s
+x-casaos:
+  id: com.novarion.velaris
+  main: velaris
+  index: /
+  port_map: "${WEBUI_PORT:-8097}"
+  scheme: http
+  icon: https://cdn.jsdelivr.net/gh/Homiiboy/Novarion-Appstore@gh-pages/apps/com.novarion.velaris/assets/icon.svg
+  title:
+    en_US: Velaris
+    de_DE: Velaris
+  version: "1.0.0"

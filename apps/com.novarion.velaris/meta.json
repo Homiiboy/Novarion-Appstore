@@ -1,0 +1,28 @@
+{
+  "tagline": "More worlds within.",
+  "description": "Velaris is a cinematic Jellyfin web client with a dedicated streaming interface, Discovery, Franchise Studio, Release Hub, Insights, Profiles, TV Mode and an advanced player experience. Jellyfin remains the backend for authentication, libraries, playback and transcoding.",
+  "author": "Homiiboy",
+  "developer": "Homiiboy / Jellyfin Project",
+  "category": "Media",
+  "architectures": [
+    "amd64",
+    "arm64"
+  ],
+  "update_at": "2026-09-10",
+  "website": "https://github.com/Homiiboy/velaris-web/tree/velaris",
+  "repo": "https://github.com/Homiiboy/velaris-web",
+  "docs": "https://github.com/Homiiboy/velaris-web/blob/velaris/docs/ZIMAOS.md",
+  "title": "Velaris",
+  "release_note": "First stable Velaris release with production Docker and ZimaOS packaging.",
+  "base_url": "https://cdn.jsdelivr.net/gh/Homiiboy/Novarion-Appstore@gh-pages",
+  "id": "com.novarion.velaris",
+  "version": "1.0.0",
+  "categories": [
+    "media"
+  ],
+  "min_memory": 0,
+  "min_image_size": {
+    "amd64": 60955456,
+    "arm64": 61365176
+  }
+}

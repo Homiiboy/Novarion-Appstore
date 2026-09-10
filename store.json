@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "store_id": "com.novarion.appstore",
+  "name": "Novarion App Store",
+  "description": "Curated self-hosted applications for ZimaOS by Novarion.",
+  "maintainer": "Homiiboy / Novarion",
+  "url": "https://github.com/Homiiboy/Novarion-Appstore"
+}

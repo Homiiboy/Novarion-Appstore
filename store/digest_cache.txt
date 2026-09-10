@@ -1,0 +1,1 @@
+ghcr.io/homiiboy/velaris-web:1.0.0 sha256:94833a237caebde1c2c3c5adc7fa111d817a193025bd7b568fea231c180cd331
