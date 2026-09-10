@@ -1,0 +1,53 @@
+name: Build and Publish Novarion App Store
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: novarion-appstore-publish
+  cancel-in-progress: true
+
+jobs:
+  build-and-publish:
+    name: Build and publish store
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build ZimaOS App Store v2
+        uses: IceWhaleTech/build-appstore-action@407bf02f7ca1d3d610c88c895dc28b016bdace48
+        with:
+          source: .
+          output: dist
+          base-url: https://cdn.jsdelivr.net/gh/Homiiboy/Novarion-Appstore@gh-pages
+          cache-file: .cache/build_appstore/image-size-cache.json
+          digest-cache-file: .cache/build_appstore/image-digest-cache.json
+          report-json: out/build-v2-report.json
+          report-title: Novarion App Store Build Report
+
+      - name: Disable Jekyll processing
+        run: touch dist/.nojekyll
+
+      - name: Upload generated store artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: novarion-appstore-dist
+          path: dist
+          if-no-files-found: error
+
+      - name: Publish gh-pages branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./dist
+          force_orphan: true
